@@ -270,58 +270,78 @@ body {
     }
 }
 
-/* Celulares (Menos de 768px) */
+/* Celulares (Menos de 768px) - VERSIÓN CORREGIDA */
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
-        padding: 1rem;
-        gap: 10px;
+        padding: 1rem 0.5rem;
+        text-align: center;
+    }
+
+    .header-brand {
+        flex-direction: column;
+        gap: 5px;
+        margin-bottom: 15px;
+    }
+
+    .logo-img {
+        height: 40px; /* Logo un poco más chico para ganar espacio */
+    }
+
+    .school-name {
+        font-size: 1rem;
+        display: block;
     }
 
     .nav-links {
         width: 100%;
-        justify-content: center;
+        display: flex;
+        justify-content: space-around; /* Reparte el espacio entre Inicio y Unidades */
+        padding: 0;
     }
 
-    .school-name {
-        font-size: 1.1rem;
+    .nav-links li {
+        padding: 0;
+        flex: 1; /* Hace que cada botón ocupe la mitad de la pantalla */
     }
 
-    .hero h1 {
-        font-size: 2rem;
+    .nav-links a {
+        display: block;
+        padding: 10px;
+        background-color: #2d3e50; /* Un fondo sutil para que parezcan botones */
+        border-radius: 5px;
+        margin: 0 5px;
+        font-size: 0.9rem;
     }
 
-    .hero p {
-        font-size: 1rem;
-    }
-
-    .section-title {
-        font-size: 1.8rem;
-    }
-
-    /* En celulares, el menú desplegable se alinea al centro */
+    /* EL DESPLEGABLE EN CELULAR */
     .dropdown-content {
-        right: auto;
-        left: 50%;
-        transform: translateX(-50%) translateY(10px);
+        position: fixed; /* Se pega a la pantalla para que no se mueva */
+        top: auto;
+        left: 5%;
+        right: 5%;
+        width: 90%;
+        margin-top: 5px;
+        transform: translateY(10px);
+        z-index: 2000;
     }
 
     .dropdown:hover .dropdown-content {
-        transform: translateX(-50%) translateY(0);
+        transform: translateY(0);
     }
-}
 
-/* Celulares Pequeños (Menos de 480px) */
-@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+        padding-left: 10px;
+    }
+
+    /* Tarjetas en una sola columna para que el texto no se amontone */
     .grid-models, .sub-grid {
-        grid-template-columns: 1fr; /* Una sola columna para que no se vea apretado */
-    }
-
-    .card, .sub-card {
-        padding: 15px;
-    }
-
-    .hero {
-        height: 50vh;
+        grid-template-columns: 1fr !important;
+        gap: 15px;
     }
 }
