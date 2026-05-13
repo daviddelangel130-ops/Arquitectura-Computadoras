@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arquitectura de Computadoras - TecNM Saltillo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="header-brand">
+                <img src="image.png" alt="Logo TecNM Saltillo" class="logo-img">
+                <span class="school-name">Tecnológico de Saltillo</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Inicio</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Unidades ▼</a>
+                    <div class="dropdown-content">
+                        <a href="#unidad1">U1: Modelos de Cómputo</a>
+                        <a href="#unidad2">U2: Procesador (CPU)</a>
+                        <a href="#unidad3">U3: Selección Hardware</a>
+                        <a href="#unidad4">U4: Memorias</a>
+                        <a href="#unidad5">U5: Procesamiento Paralelo</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="hero">
+        <div class="hero-content">
+            <h1>Arquitectura de Computadoras</h1>
+            <p>Portal académico sobre la estructura, funcionamiento y diseño de sistemas computacionales.</p>
+        </div>
+    </main>
+
+
+    <section id="unidad1" class="content-section">
+        <div class="container">
+            <h2 class="section-title">Unidad 1: Modelos de Arquitecturas de Cómputo</h2>
+            
+            <div class="info-block">
+                <h3>1.1 Modelos de Arquitectura</h3>
+                <p>La arquitectura de computadoras define la base conceptual y técnica para la creación de sistemas funcionales, gestionando cómo los componentes se comunican y ejecutan instrucciones.</p>
+                
+                <div class="grid-models">
+                    <div class="card">
+                        <h4>Clásico (Von Neumann)</h4>
+                        <p>Usa una sola memoria para instrucciones y datos. Es eficiente pero genera un cuello de botella al compartir el mismo bus.</p>
+                    </div>
+                    <div class="card">
+                        <h4>Segmentadas (Harvard)</h4>
+                        <p>Utiliza memorias separadas para instrucciones y datos, permitiendo que el CPU trabaje con ambas al mismo tiempo.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-block">
+                <h3>1.2 Análisis de los Componentes</h3>
+                <p>El sistema se divide en tres áreas críticas de interacción:</p>
+                <div class="sub-grid">
+                    <div class="sub-card">
+                        <h5>1.2.1 Hardware</h5>
+                        <p>Componentes físicos como CPU, Motherboard y Buses.</p>
+                    </div>
+                    <div class="sub-card">
+                        <h5>1.2.2 Software</h5>
+                        <p>Sistemas operativos y aplicaciones que controlan el flujo lógico.</p>
+                    </div>
+                    <div class="sub-card">
+                        <h5>1.2.3 Periféricos</h5>
+                        <p>Dispositivos de Entrada/Salida que conectan al usuario con la máquina.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-block highlight-box">
+                <h3>1.3 Vistas de la Arquitectura</h3>
+                <p>Existen diferentes niveles de abstracción según el rol:</p>
+                <ul>
+                    <li><strong>Programador:</strong> Ve el conjunto de instrucciones (ISA) y registros.</li>
+                    <li><strong>Diseñador:</strong> Ve buses, lógica digital y microarquitectura.</li>
+                    <li><strong>Sistemas:</strong> Ve la integración total y jerarquías de memoria.</li>
+                </ul>
+            </div>
+
+            <div class="info-block">
+                <h3>1.4 Clasificación de Flynn</h3>
+                <p>Clasifica las máquinas según el flujo de instrucciones y datos:</p>
+                <div class="grid-models">
+                    <div class="card">
+                        <h4>SISD y SIMD</h4>
+                        <p>Sistemas monoprocesador tradicionales (SISD) vs Procesamiento de vectores como GPUs (SIMD).</p>
+                    </div>
+                    <div class="card">
+                        <h4>MISD y MIMD</h4>
+                        <p>Múltiples instrucciones para un dato (MISD) vs Sistemas multinúcleo modernos (MIMD).</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-block">
+                <h3>1.5 Jerarquía de Buses</h3>
+                <p>Define cómo se transporta la información. Se utilizan buses de <strong>Datos</strong> (valor), <strong>Direcciones</strong> (ubicación) y <strong>Control</strong> (señales de sincronización).</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="unidad2" class="content-section" style="background-color: #111a2e; border-top: 1px solid #1e293b;">
+        <div class="container">
+            <h2 class="section-title">Unidad 2: Estructura y Funcionamiento del Procesador</h2>
+            
+            <div class="info-block">
+                <h3>2.1 Organización del Procesador</h3>
+                <p>El procesador o CPU es el cerebro del sistema. Su función es interpretar y ejecutar instrucciones coordinando todas las operaciones internas. Se basa en tres funciones principales:</p>
+                <div class="sub-grid">
+                    <div class="sub-card">
+                        <h5>Control Central</h5>
+                        <p>Actúa como director de orquesta, coordinando las señales para que los componentes trabajen en orden.</p>
+                    </div>
+                    <div class="sub-card">
+                        <h5>Procesamiento</h5>
+                        <p>Ejecuta cálculos aritméticos y lógicos sobre los datos recibidos.</p>
+                    </div>
+                    <div class="sub-card">
+                        <h5>Pipelining</h5>
+                        <p>Técnica de segmentación que permite acelerar la ejecución al procesar varias instrucciones en diferentes etapas simultáneamente.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-block">
+                <h3>2.2 Estructura de Registros</h3>
+                <p>Los registros son memorias de ultra alta velocidad dentro del procesador. Se clasifican principalmente en dos tipos:</p>
+                <div class="grid-models">
+                    <div class="card">
+                        <h4>Visibles para el Usuario</h4>
+                        <p>Permiten al programador de lenguaje máquina o ensamblador minimizar referencias a la memoria principal. Incluyen registros de datos, direcciones e índices.</p>
+                    </div>
+                    <div class="card">
+                        <h4>Control y Estado</h4>
+                        <p>Utilizados por la unidad de control para supervisar la ejecución. Los más importantes son:</p>
+                        <ul style="font-size: 0.9rem; margin-top: 10px; color: #94a3b8;">
+                            <li><strong>Program Counter (PC):</strong> Dirección de la próxima instrucción.</li>
+                            <li><strong>Instruction Register (IR):</strong> La instrucción que se está ejecutando.</li>
+                            <li><strong>Status Register (Flags):</strong> Indica resultados de operaciones (Cero, Acarreo, Signo).</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-block highlight-box">
+                <h3>2.3 El Ciclo de Instrucción</h3>
+                <p>Es el proceso que sigue el procesador para ejecutar cada instrucción. Según tu material, se divide en las siguientes fases críticas:</p>
+                <ol style="margin-left: 25px; margin-top: 15px; color: #cbd5e1;">
+                    <li><strong>Fetch (Búsqueda):</strong> Se trae la instrucción desde la memoria al procesador.</li>
+                    <li><strong>Decode (Decodificación):</strong> Se interpreta qué es lo que la instrucción debe hacer.</li>
+                    <li><strong>Execute (Ejecución):</strong> Se realiza la operación (suma, movimiento de datos, etc.).</li>
+                    <li><strong>Writeback (Escritura):</strong> Se guardan los resultados en la memoria o registros.</li>
+                </ol>
+            </div>
+
+            <div class="info-block">
+                <h3>2.4 Modos de Direccionamiento</h3>
+                <p>Definen cómo se calculan las direcciones de memoria de los operandos. Algunos ejemplos clave son el <strong>Direccionamiento Directo</strong>, <strong>Indirecto</strong> e <strong>Indexado</strong> (muy usado en sistemas ARM para control de periféricos).</p>
+            </div>
+        </div>
+    </section>
+
+<section id="unidad3" class="content-section" style="background-color: #0f172a;">
+        <div class="container">
+            <h2 class="section-title">Unidad 3: Selección de Componentes para Ensamble</h2>
+            
+            <div class="info-block">
+                <h3>3.1 El Chipset (Centro de Control)</h3>
+                <p>Es el conjunto de circuitos que coordina el flujo de datos entre el CPU y el resto de los componentes. Su elección determina qué tan actualizable será tu equipo y qué tecnologías (como PCIe 4.0 o 5.0) podrá soportar.</p>
+            </div>
+
+            <div class="info-block">
+                <h3>3.2 Criterios de Selección de Hardware</h3>
+                <p>Para un ensamble profesional, se deben analizar los siguientes puntos técnicos del documento:</p>
+                <div class="sub-grid">
+                    <div class="sub-card">
+                        <h5>Unidad Central de Procesamiento</h5>
+                        <p>Se debe considerar la <strong>arquitectura (núcleos/hilos)</strong>, la frecuencia de reloj y la compatibilidad con el socket de la tarjeta madre.</p>
+                    </div>
+                    <div class="sub-card">
+                        <h5>Módulos de Entrada y Salida</h5>
+                        <p>Selección de periféricos según la tasa de transferencia y el tipo de conexión (USB-C, Thunderbolt, DisplayPort) para evitar latencias.</p>
+                    </div>
+                    <div class="sub-card">
+                        <h5>Dispositivos de Almacenamiento</h5>
+                        <p>Comparativa entre <strong>HDD</strong> (almacenamiento masivo lento) y <strong>SSD/NVMe</strong> (arranques rápidos y carga de software inmediata).</p>
+                    </div>
+                    <div class="sub-card">
+                        <h5>Fuentes de Alimentación</h5>
+                        <p>No solo es el wattage; es vital revisar la <strong>eficiencia energética</strong> (Certificación 80 Plus) para proteger los componentes internos.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-block highlight-box">
+                <h3>3.3 Aplicaciones en Ambientes de Servicio</h3>
+                <p>La arquitectura se adapta a las necesidades del entorno:</p>
+                <div class="grid-models">
+                    <div>
+                        <strong>Negocios y Comercio:</strong>
+                        <p style="font-size: 0.9rem; color: #94a3b8;">Automatización de bases de datos, gestión de inventarios y seguridad en transacciones digitales.</p>
+                    </div>
+                    <div>
+                        <strong>Industria y Manufactura:</strong>
+                        <p style="font-size: 0.9rem; color: #94a3b8;">Sistemas embebidos para control de robótica, sensores de calidad y logística automatizada.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="unidad4" class="content-section" style="background-color: #111a2e; border-top: 1px solid #1e293b;">
+        <div class="container">
+            <h2 class="section-title">Unidad 4: Memorias</h2>
+            
+            <div class="info-block">
+                <h3>4.1 Memoria RAM (Acceso Aleatorio)</h3>
+                <p>La RAM es un componente volátil que almacena datos de forma temporal para que el procesador acceda a ellos rápidamente. Su función principal es mejorar el rendimiento del sistema permitiendo ejecutar aplicaciones de manera eficiente.</p>
+                <div class="grid-models">
+                    <div class="card">
+                        <h4>Almacenamiento Temporal</h4>
+                        <p>Carga los datos necesarios de los programas abiertos. Al ser volátil, la información se borra al apagar el equipo.</p>
+                    </div>
+                    <div class="card">
+                        <h4>Multitarea</h4>
+                        <p>Una mayor cantidad de RAM permite que la computadora funcione de manera fluida con múltiples aplicaciones simultáneas.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-block">
+                <h3>4.2 Tipos de Memoria y Características</h3>
+                <p>La evolución de la memoria se mide por su velocidad (frecuencia) y latencia:</p>
+                <div class="sub-grid">
+                    <div class="sub-card">
+                        <h5>Tecnología DDR</h5>
+                        <p>Desde DDR3 hasta la actual <strong>DDR5</strong>, cada generación aumenta la tasa de transferencia y reduce el consumo de energía.</p>
+                    </div>
+                    <div class="sub-card">
+                        <h5>Frecuencia (MHz)</h5>
+                        <p>Determina la velocidad de comunicación. Equipos modernos operan desde 3200MHz hasta más de 6000MHz en gamas altas.</p>
+                    </div>
+                    <div class="sub-card">
+                        <h5>Latencia CAS (CL)</h5>
+                        <p>Es el tiempo que tarda la memoria en responder a una solicitud. Valores más bajos indican un rendimiento superior.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-block highlight-box">
+                <h3>4.3 Clasificación y Selección por Gamas</h3>
+                <p>Según el análisis de componentes del material, así se seleccionan las memorias según el uso:</p>
+                <ul style="list-style: none; padding-left: 0;">
+                    <li style="margin-bottom: 15px;">
+                        <strong style="color: #38bdf8;">Gama Media:</strong> 
+                        8 GB a 16 GB de RAM. Ideal para software de oficina, navegación fluida y diseño básico.
+                    </li>
+                    <li style="margin-bottom: 15px;">
+                        <strong style="color: #38bdf8;">Gama Alta (Premium):</strong> 
+                        32 GB a 64 GB de RAM. Utiliza frecuencias de 6000 MHz en adelante y latencias bajas (CL30). Diseñada para usuarios que buscan potencia extrema, videojuegos de última generación y renderizado profesional.
+                    </li>
+                </ul>
+            </div>
+
+            <div class="info-block">
+                <h3>4.4 Compatibilidad con Chipsets</h3>
+                <p>La memoria debe ser compatible con la placa base. Para Intel se utilizan series como la <strong>Z790</strong> y para AMD las series <strong>X670</strong> en configuraciones de alto rendimiento.</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="unidad5" class="content-section" style="background-color: #0f172a;">
+        <div class="container">
+            <h2 class="section-title">Unidad 5: Procesamiento Paralelo</h2>
+            
+            <div class="info-block">
+                <h3>5.1 Fundamentos del Paralelismo</h3>
+                <p>La computación paralela es una forma de cómputo en la que muchas instrucciones se ejecutan simultáneamente. Se basa en el principio de que los problemas grandes se pueden dividir en partes pequeñas para resolverse al mismo tiempo.</p>
+                <div class="sub-grid">
+                    <div class="sub-card">
+                        <h5>División del Problema</h5>
+                        <p>Fragmentación de tareas para que cada núcleo del procesador trabaje en una parte específica.</p>
+                    </div>
+                    <div class="sub-card">
+                        <h5>Sincronización</h5>
+                        <p>Coordinación entre procesadores para asegurar que los datos lleguen en el orden correcto.</p>
+                    </div>
+                    <div class="sub-card">
+                        <h5>Escalabilidad</h5>
+                        <p>Capacidad del sistema para mejorar su rendimiento al añadir más recursos de procesamiento.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-block">
+                <h3>5.2 Clasificación y Tipos</h3>
+                <p>El paralelismo se puede aplicar en diferentes niveles del sistema:</p>
+                <div class="grid-models">
+                    <div class="card">
+                        <h4>Paralelismo a nivel de Instrucción</h4>
+                        <p>Uso de <strong>Pipelining</strong> para que el CPU empiece a procesar la siguiente instrucción antes de terminar la actual.</p>
+                    </div>
+                    <div class="card">
+                        <h4>Paralelismo de Datos</h4>
+                        <p>Una misma operación se aplica a un conjunto masivo de datos (común en procesamiento de video).</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-block highlight-box">
+                <h3>5.3 Organización y Topologías de Red</h3>
+                <p>Define cómo se conectan los nodos para intercambiar información:</p>
+                <ul style="margin-top: 15px;">
+                    <li><strong>Malla (Mesh):</strong> Los nodos se conectan a sus vecinos, ideal para servidores masivos.</li>
+                    <li><strong>Anillo (Ring):</strong> Conexión circular, usada históricamente en buses internos de CPUs de escritorio.</li>
+                    <li><strong>Estrella:</strong> Todos los nodos se conectan a un conmutador central.</li>
+                </ul>
+            </div>
+
+            <div class="info-block">
+                <h3>5.4 Arquitecturas de Vanguardia</h3>
+                <p>Análisis de las soluciones actuales en el mercado:</p>
+                <div class="sub-grid">
+                    <div class="sub-card">
+                        <h5>AMD: Infinity Fabric</h5>
+                        <p>Uso de <strong>Chiplets</strong> (pequeños trozos de silicio) conectados por una red ultra rápida para mejorar la eficiencia.</p>
+                    </div>
+                    <div class="sub-card">
+                        <h5>NVIDIA: GPU Computing</h5>
+                        <p>Miles de núcleos pequeños trabajando en paralelo para Inteligencia Artificial y renderizado gráfico.</p>
+                    </div>
+                    <div class="sub-card">
+                        <h5>Intel: Mesh/Ring Bus</h5>
+                        <p>Optimización de la comunicación interna entre núcleos de alto rendimiento y núcleos de eficiencia.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2026 Tecnológico de Saltillo - Arquitectura de Computadoras</p>
+    </footer>
+</body>
+
+
+</html>
