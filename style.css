@@ -254,3 +254,74 @@ body {
     font-size: 0.9rem;
     border-top: 1px solid #334155;
 }
+
+/* =========================================
+   ADAPTACIÓN A DISPOSITIVOS (MEDIA QUERIES)
+   ========================================= */
+
+/* Tablets y Celulares Grandes (Menos de 992px) */
+@media (max-width: 992px) {
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+    
+    .content-section {
+        padding: 60px 5%;
+    }
+}
+
+/* Celulares (Menos de 768px) */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 1rem;
+        gap: 10px;
+    }
+
+    .nav-links {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .school-name {
+        font-size: 1.1rem;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    /* En celulares, el menú desplegable se alinea al centro */
+    .dropdown-content {
+        right: auto;
+        left: 50%;
+        transform: translateX(-50%) translateY(10px);
+    }
+
+    .dropdown:hover .dropdown-content {
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+/* Celulares Pequeños (Menos de 480px) */
+@media (max-width: 480px) {
+    .grid-models, .sub-grid {
+        grid-template-columns: 1fr; /* Una sola columna para que no se vea apretado */
+    }
+
+    .card, .sub-card {
+        padding: 15px;
+    }
+
+    .hero {
+        height: 50vh;
+    }
+}
