@@ -25,6 +25,15 @@
                         <a href="#unidad5">U5: Procesamiento Paralelo</a>
                     </div>
                 </li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Prácticas ▼</a>
+                    <div class="dropdown-content">
+                        <a href="#practica1">Práctica 1: Componentes</a>
+                        <a href="#practica2">Práctica 2: Procesadores</a>
+                        <a href="#practica3">Práctica 3: Evolución RAM</a>
+                        <a href="#practica4">Práctica 4: Ensamble y POST HP</a>
+                    </div>
+                </li>
             </ul>
         </nav>
     </header>
@@ -35,7 +44,6 @@
             <p>Portal académico sobre la estructura, funcionamiento y diseño de sistemas computacionales.</p>
         </div>
     </main>
-
 
     <section id="unidad1" class="content-section">
         <div class="container">
@@ -108,7 +116,7 @@
         </div>
     </section>
 
-    <section id="unidad2" class="content-section" style="background-color: #111a2e; border-top: 1px solid #1e293b;">
+    <section id="unidad2" class="content-section alt-bg">
         <div class="container">
             <h2 class="section-title">Unidad 2: Estructura y Funcionamiento del Procesador</h2>
             
@@ -142,7 +150,7 @@
                     <div class="card">
                         <h4>Control y Estado</h4>
                         <p>Utilizados por la unidad de control para supervisar la ejecución. Los más importantes son:</p>
-                        <ul style="font-size: 0.9rem; margin-top: 10px; color: #94a3b8;">
+                        <ul class="card-list">
                             <li><strong>Program Counter (PC):</strong> Dirección de la próxima instrucción.</li>
                             <li><strong>Instruction Register (IR):</strong> La instrucción que se está ejecutando.</li>
                             <li><strong>Status Register (Flags):</strong> Indica resultados de operaciones (Cero, Acarreo, Signo).</li>
@@ -154,10 +162,10 @@
             <div class="info-block highlight-box">
                 <h3>2.3 El Ciclo de Instrucción</h3>
                 <p>Es el proceso que sigue el procesador para ejecutar cada instrucción. Según tu material, se divide en las siguientes fases críticas:</p>
-                <ol style="margin-left: 25px; margin-top: 15px; color: #cbd5e1;">
+                <ol class="instruction-list">
                     <li><strong>Fetch (Búsqueda):</strong> Se trae la instrucción desde la memoria al procesador.</li>
                     <li><strong>Decode (Decodificación):</strong> Se interpreta qué es lo que la instrucción debe hacer.</li>
-                    <li><strong>Execute (Ejecución):</strong> Se realiza la operación (suma, movimiento de datos, etc.).</li>
+                    <li><strong>Execute (Ejecución):</strong> Se realiza la operation (suma, movimiento de datos, etc.).</li>
                     <li><strong>Writeback (Escritura):</strong> Se guardan los resultados en la memoria o registros.</li>
                 </ol>
             </div>
@@ -169,7 +177,7 @@
         </div>
     </section>
 
-<section id="unidad3" class="content-section" style="background-color: #0f172a;">
+    <section id="unidad3" class="content-section">
         <div class="container">
             <h2 class="section-title">Unidad 3: Selección de Componentes para Ensamble</h2>
             
@@ -218,7 +226,7 @@
         </div>
     </section>
 
-    <section id="unidad4" class="content-section" style="background-color: #111a2e; border-top: 1px solid #1e293b;">
+    <section id="unidad4" class="content-section alt-bg">
         <div class="container">
             <h2 class="section-title">Unidad 4: Memorias</h2>
             
@@ -259,14 +267,14 @@
             <div class="info-block highlight-box">
                 <h3>4.3 Clasificación y Selección por Gamas</h3>
                 <p>Según el análisis de componentes del material, así se seleccionan las memorias según el uso:</p>
-                <ul style="list-style: none; padding-left: 0;">
-                    <li style="margin-bottom: 15px;">
-                        <strong style="color: #38bdf8;">Gama Media:</strong> 
-                        8 GB a 16 GB de RAM. Ideal para software de oficina, navegación fluida y diseño básico.
+                <ul class="gama-list">
+                    <li>
+                        <strong class="gama-title">Gama Media:</strong> 
+                        <span>8 GB a 16 GB de RAM. Ideal para software de oficina, navegación fluida y diseño básico.</span>
                     </li>
-                    <li style="margin-bottom: 15px;">
-                        <strong style="color: #38bdf8;">Gama Alta (Premium):</strong> 
-                        32 GB a 64 GB de RAM. Utiliza frecuencias de 6000 MHz en adelante y latencias bajas (CL30). Diseñada para usuarios que buscan potencia extrema, videojuegos de última generación y renderizado profesional.
+                    <li>
+                        <strong class="gama-title">Gama Alta (Premium):</strong> 
+                        <span>32 GB a 64 GB de RAM. Utiliza frecuencias de 6000 MHz en adelante y latencias bajas (CL30). Diseñada para usuarios que buscan potencia extrema, videojuegos de última generación y renderizado profesional.</span>
                     </li>
                 </ul>
             </div>
@@ -278,7 +286,7 @@
         </div>
     </section>
     
-    <section id="unidad5" class="content-section" style="background-color: #0f172a;">
+    <section id="unidad5" class="content-section">
         <div class="container">
             <h2 class="section-title">Unidad 5: Procesamiento Paralelo</h2>
             
@@ -319,7 +327,7 @@
             <div class="info-block highlight-box">
                 <h3>5.3 Organización y Topologías de Red</h3>
                 <p>Define cómo se conectan los nodos para intercambiar información:</p>
-                <ul style="margin-top: 15px;">
+                <ul class="topology-list">
                     <li><strong>Malla (Mesh):</strong> Los nodos se conectan a sus vecinos, ideal para servidores masivos.</li>
                     <li><strong>Anillo (Ring):</strong> Conexión circular, usada históricamente en buses internos de CPUs de escritorio.</li>
                     <li><strong>Estrella:</strong> Todos los nodos se conectan a un conmutador central.</li>
@@ -347,10 +355,295 @@
         </div>
     </section>
 
-    <footer class="footer">
-        <p>&copy; 2026 Tecnológico de Saltillo - Arquitectura de Computadoras</p>
-    </footer>
+    <section id="practica1" class="content-section alt-bg">
+        <div class="container">
+            <h2 class="section-title">Práctica 1: Componentes de la Computadora</h2>
+            
+            <div class="info-block">
+                <h3>Descripción del Laboratorio</h3>
+                <p>Esta práctica consistió en la identificación física, inspección y análisis conceptual de los componentes internos esenciales que constituyen el hardware de un sistema de cómputo, determinando el rol de cada uno en la estructura general.</p>
+                
+                <div class="grid-models">
+                    <div class="card">
+                        <h4>Tarjeta Madre</h4>
+                        <p>Es el componente principal de una computadora. Es la placa donde se conectan y se comunican todas las demás partes: procesador, memoria RAM, disco duro, puertos, etc. Coordina y permite que todos trabajen juntos.</p>
+                    </div>
+                    <div class="card">
+                        <h4>Procesador (CPU)</h4>
+                        <p>Componente principal encargado de ejecutar todas las instrucciones de los programas, realizar cálculos y coordinar el sistema mediante un ciclo de buscar, decodificación y ejecución. Sus variables clave son los GHz, núcleos e hilos.</p>
+                    </div>
+                    <div class="card">
+                        <h4>Fuente de Poder</h4>
+                        <p>Componente encargado de suministrar energía eléctrica a todos los dispositivos internos. Convierte la corriente alterna (AC) del enchufe en corriente continua (DC) y regula el voltaje para evitar daños por sobrecargas.</p>
+                    </div>
+                    <div class="card">
+                        <h4>Ventilador y Enfriamiento</h4>
+                        <p>Se encarga de disipar el calor generado por el procesador. Mantiene una temperatura adecuada expulsando el aire caliente hacia afuera del gabinete y permitiendo la entrada de aire fresco para la estabilidad del equipo.</p>
+                    </div>
+                    <div class="card" style="grid-column: 1 / -1;">
+                        <h4>Memoria RAM</h4>
+                        <p>Componente donde la computadora almacena temporalmente los datos y programas que está utilizando en ese momento. Su función es permitir un acceso rápido a la información. Es volátil (se borra al apagar el equipo) y su capacidad define la fluidez de la multitarea.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-block highlight-box">
+                <h3>Conclusión de la Práctica 1</h3>
+                <p>En conclusión, los componentes internos de una computadora trabajan en conjunto para garantizar su correcto funcionamiento. Cada uno cumple una función esencial (procesamiento, almacenamiento temporal, suministro de energía y enfriamiento), y si uno de ellos falla, el rendimiento general del equipo se ve directamente afectado.</p>
+            </div>
+
+            <div class="info-block">
+                <h3>Evidencias Fotográficas de la Práctica 1</h3>
+                <p>Registro visual de los componentes inspeccionados en el laboratorio de ensamble:</p>
+                
+                <div class="photo-gallery">
+                    <div class="gallery-item">
+                        <img src="componente1.jpeg" alt="Inspección de Tarjeta Madre">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="componente2.jpeg" alt="Procesador y Memoria RAM">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="componente3.jpeg" alt="Fuente de Poder y Conectores">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="practica2" class="content-section alt-bg">
+        <div class="container">
+            <h2 class="section-title">Prácticas de Laboratorio</h2>
+            
+            <div class="info-block">
+                <h3>Práctica 2: Desarmando Procesadores</h3>
+                <p>Esta práctica consistió en la inspección física y el análisis estructural de diversos procesadores históricos. El objetivo principal fue identificar componentes internos críticos, comprender la evolución de las frecuencias de reloj y estudiar los diferentes métodos de empaquetado y conectores (sockets) utilizados en la industria.</p>
+                
+                <div class="highlight-box" style="margin-bottom: 30px;">
+                    <h4>Observaciones de Laboratorio</h4>
+                    <p style="margin-top: 10px; font-style: italic; color: #cbd5e1;">
+                        "Fue un proceso de análisis muy enriquecedor para observar detalladamente la evolución técnica de los procesadores, las diferencias fundamentales en sus pines y la distribución del silicio en soluciones de escritorio frente a servidores."
+                    </p>
+                </div>
+
+                <h3>Tabla Comparativa de los Procesadores Analizados</h3>
+                <div class="table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Procesador / Modelo</th>
+                                <th>Frecuencia</th>
+                                <th>Socket</th>
+                                <th>Litografía / Notas Técnicas</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Pentium Dual-Core E2140</strong></td>
+                                <td>1.60 GHz</td>
+                                <td>LGA 775</td>
+                                <td>65 nm | Basado en microarquitectura Conroe.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Pentium 4 - 531</strong></td>
+                                <td>3.00 GHz</td>
+                                <td>LGA 775</td>
+                                <td>90 nm | Núcleo Prescott con soporte Hyper-Threading.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Celeron D 352</strong></td>
+                                <td>3.20 GHz</td>
+                                <td>LGA 775</td>
+                                <td>65 nm | Núcleo Cedar Mill, 512KB de caché L2.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Celeron 1100A</strong></td>
+                                <td>1.10 GHz</td>
+                                <td>PGA 370</td>
+                                <td>130 nm | Núcleo Tualatin, empaquetado clásico.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Intel Xeon MP (Potomac)</strong></td>
+                                <td>-</td>
+                                <td>Socket 604</td>
+                                <td>Diseñado para arquitecturas de servidores multiprocesador de alta gama.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="info-block" style="margin-top: 60px;">
+                <h3>Evidencias Fotográficas de la Práctica 2</h3>
+                <p>Registro visual de los componentes inspeccionados en el laboratorio:</p>
+                
+                <div class="photo-gallery">
+                    <div class="gallery-item">
+                        <img src="foto1.jpeg" alt="Procesador Dual-Core E2140 e Intel Pentium 4">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="foto2.jpeg" alt="Detalle de Pines e IHS">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="foto3.jpeg" alt="Procesador Celeron D e Intel Xeon">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="practica3" class="content-section alt-bg">
+        <div class="container">
+            <h2 class="section-title">Práctica 3: Evolución y Comportamiento de las Memorias RAM</h2>
+            
+            <div class="info-block">
+                <h3>Descripción del Laboratorio</h3>
+                <p>Esta actividad se centró en analizar cómo funciona la asignación de memoria RAM en el sistema al variar la cantidad de módulos físicos instalados, así como evaluar el impacto intergeneracional de las tecnologías DDR a lo largo de los años.</p>
+                
+                <h3>Tabla Comparativa de Generaciones DDR</h3>
+                <div class="table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Generación</th>
+                                <th>Año / Época</th>
+                                <th>Pines</th>
+                                <th>Voltaje</th>
+                                <th>Velocidad Estándar</th>
+                                <th>Características Clave</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>DDR1</strong></td>
+                                <td>~2000</td>
+                                <td>184</td>
+                                <td>-</td>
+                                <td>Hasta 400 MHz</td>
+                                <td>Duplicó la transferencia de datos sin subir la frecuencia de reloj básica.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>DDR2</strong></td>
+                                <td>~2004</td>
+                                <td>240</td>
+                                <td>-</td>
+                                <td>Hasta 1066 MHz</td>
+                                <td>Permitió velocidades superiores con menor consumo energético.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>DDR3</strong></td>
+                                <td>2007</td>
+                                <td>240</td>
+                                <td>1.5 V</td>
+                                <td>Hasta 2133 MHz</td>
+                                <td>Estándar duradero; muy eficiente para laptops y servidores.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>DDR4</strong></td>
+                                <td>Estándar</td>
+                                <td>288</td>
+                                <td>1.2 V</td>
+                                <td>2400 a 3200 MHz+</td>
+                                <td>Alta compatibilidad actual con frecuencias elevadas.</td>
+                            </tr>
+                            <tr>
+                                <td><strong>DDR5</strong></td>
+                                <td>2020-2021</td>
+                                <td>288 (Alterno)</td>
+                                <td>-</td>
+                                <td>4800 a 8000 MHz+</td>
+                                <td>Diseño optimizado para flujos masivos en procesadores multinúcleo.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div class="info-block highlight-box">
+                <h3>Análisis de Escenarios (Escalabilidad de Módulos)</h3>
+                <p>Durante la experimentación física y lógica se observaron los cambios de comportamiento del sistema operativo al poblar los slots DIMM:</p>
+                <ul>
+                    <li><strong>Configuración Single-Channel (1 Módulo):</strong> Muestra la línea base de consumo del sistema operativo con el software elemental.</li>
+                    <li><strong>Configuración Dual-Channel (2 Módulos):</strong> Reparte de forma simétrica las solicitudes, desatando el ancho de banda del procesador.</li>
+                    <li><strong>Configuraciones Multi-Módulo (3 o 4 Bancos):</strong> Incrementa la capacidad de direccionamiento total, estabilizando los entornos pesados y la multitarea intensa sin caídas bruscas de rendimiento.</li>
+                </ul>
+            </div>
+
+            <div class="info-block">
+                <h3>Evidencias Fotográficas de la Práctica 3</h3>
+                <p>Capturas del comportamiento de memoria en el sistema y de los distintos encapsulados de módulos analizados:</p>
+                
+                <div class="photo-gallery">
+                    <div class="gallery-item">
+                        <img src="ram_captura.jpeg" alt="Monitoreo de carga de RAM en el sistema">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="ram_modulos1.jpeg" alt="Comparación de muescas DDR, DDR2 y DDR3">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="ram_modulos2.jpeg" alt="Estructura de circuitos integrados DDR4 y DDR5">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="practica4" class="content-section alt-bg">
+        <div class="container">
+            <h2 class="section-title">Práctica 4: Proceso de Ensamble, Mantenimiento y POST de un Equipo de Cómputo</h2>
+            
+            <div class="info-block">
+                <h3>Descripción del Laboratorio</h3>
+                <p>Esta práctica documentó el proceso técnico de desarmado por fases, mantenimiento preventivo profundo, reensamblaje y verificación de encendido de un equipo de escritorio HP de formato compacto (SFF/Slim).</p>
+                
+                <div class="grid-models">
+                    <div class="card">
+                        <h4>Fase 1: Diagnóstico Inicial</h4>
+                        <p>Se inspeccionó la computadora abierta sobre la mesa de trabajo con su configuración de fábrica completa: fuente de poder compacta, disipador original, módulos de memoria y el soporte metálico estructural que sujeta las unidades de almacenamiento óptico y mecánico.</p>
+                    </div>
+                    <div class="card">
+                        <h4>Fase 2: Desarmado Parcial</h4>
+                        <p>Se retiró el soporte metálico frontal para liberar espacio de maniobra. Posteriormente, se desconectaron de forma segura los cables de energía principales que van de la fuente hacia los conectores de la placa base (conectores ATX de alimentación principal y de 4/8 pines del CPU), apartándolos para despejar el espacio de trabajo.</p>
+                    </div>
+                    <div class="card">
+                        <h4>Fase 3: Desmontaje Máximo</h4>
+                        <p>Se removieron completamente la fuente de alimentación y el bloque del disipador térmico sobre el procesador. Con el CPU al descubierto en su zócalo, se realizó un mantenimiento profundo limpiando los residuos de polvo acumulados en el ventilador and preparando el área para verificar la pasta térmica. Se identificó también un SSD Western Digital Green acoplado en el chasis.</p>
+                    </div>
+                    <div class="card">
+                        <h4>Fase 4: Reensamblaje Técnico</h4>
+                        <p>Se volvieron a montar las piezas críticas fijando firmemente el disipador sobre el procesador, reinstalando la fuente de poder y ruteando de nuevo los cables de corriente a sus respectivos sockets. Se preparó el entorno conectando los periféricos elementales (alimentación, mouse HP por USB y cable de video VGA/DisplayPort hacia el monitor).</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="info-block highlight-box">
+                <h3>Prueba de Fuego: El proceso de POST</h3>
+                <p>La práctica concluyó ejecutando de forma exitosa la prueba de <strong>POST (Power-On Self-Test)</strong>. Al presionar el botón de encendido, la tarjeta madre inicializó correctamente los subsistemas de hardware críticos (procesador, memoria RAM y gráficos), desplegando en pantalla el logotipo oficial de HP junto con la leyenda de seguridad <em>"Protected by HP Sure Start"</em>, confirmando la estabilidad absoluta del ensamble.</p>
+            </div>
+
+            <div class="info-block">
+                <h3>Evidencias Fotográficas de la Práctica 4</h3>   
+                <p>Registro cronológico del desensamble, mantenimiento profundo y encendido final del equipo HP:</p>
+                
+                <div class="photo-gallery">
+                    <div class="gallery-item">
+                        <img src="hp_fase1.jpeg" alt="Estado inicial y componentes del equipo HP Slim">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="hp_fase2.jpeg" alt="Desarmado parcial y gestión de cables de alimentación">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="hp_fase3.jpeg" alt="Desmontaje completo, CPU expuesto y mantenimiento del disipador">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="hp_fase4.jpeg" alt="Reensamblaje interno y conexionado externo de periféricos">
+                    </div>
+                    <div class="gallery-item" style="grid-column: 1 / -1;">
+                        <img src="hp_post.jpeg" alt="Prueba de POST exitosa mostrando pantalla de HP Sure Start" style="height: 300px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
-
-
 </html>
