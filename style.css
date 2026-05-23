@@ -1,3 +1,6 @@
+/* ==========================================================================
+   CONFIGURACIÓN GENERAL Y ESTILOS BASE
+   ========================================================================== */
 * {
     margin: 0;
     padding: 0;
@@ -10,19 +13,21 @@ html {
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #0f172a;
+    background-color: #0f172a; /* Fondo Slate Oscuro */
     color: #f1f5f9;
     line-height: 1.6;
 }
 
-/* NAVEGACIÓN */
+/* ==========================================================================
+   BARRA DE NAVEGACIÓN (NAVBAR)
+   ========================================================================== */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #1e293b;
     padding: 0.8rem 5%;
-    border-bottom: 3px solid #38bdf8;
+    border-bottom: 3px solid #38bdf8; /* Línea de acento azul celeste */
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -59,19 +64,20 @@ body {
     text-decoration: none;
     color: #cbd5e1;
     font-weight: 500;
-    transition: 0.3s;
+    transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
     color: #38bdf8;
 }
 
-/* MENÚ DESPLEGABLE */
+/* MENÚS DESPLEGABLES (DROPDOWNS) */
 .dropdown {
     position: relative;
     display: inline-block;
 }
 
+/* Zona de seguridad para evitar que el menú se cierre al mover el mouse */
 .dropdown::after {
     content: "";
     position: absolute;
@@ -87,10 +93,10 @@ body {
     visibility: hidden;
     position: absolute;
     background-color: #1e293b;
-    min-width: 220px;
+    min-width: 240px;
     right: 0;
     top: 100%;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
     border-radius: 4px;
     border: 1px solid #334155;
     transition: all 0.3s ease-in-out;
@@ -112,11 +118,7 @@ body {
     color: #94a3b8;
     text-decoration: none;
     border-bottom: 1px solid #334155;
-    transition: background 0.2s;
-}
-
-.dropdown-content a:last-child {
-    border-bottom: none;
+    transition: background 0.2s, color 0.2s;
 }
 
 .dropdown-content a:hover {
@@ -124,7 +126,9 @@ body {
     color: #38bdf8;
 }
 
-/* SECCIÓN HERO */
+/* ==========================================================================
+   SECCIÓN HERO / BIENVENIDA
+   ========================================================================== */
 .hero {
     height: 60vh;
     display: flex;
@@ -139,7 +143,7 @@ body {
     font-size: 3.5rem;
     color: #38bdf8;
     margin-bottom: 1rem;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .hero p {
@@ -148,11 +152,18 @@ body {
     color: #94a3b8;
 }
 
-/* CONTENIDO DE UNIDADES */
+/* ==========================================================================
+   DISEÑO DE SECCIONES DE CONTENIDO
+   ========================================================================== */
 .content-section {
     padding: 80px 10%;
     border-bottom: 1px solid #1e293b;
     scroll-margin-top: 80px;
+}
+
+.alt-bg {
+    background-color: #111a2e;
+    border-top: 1px solid #1e293b;
 }
 
 .container {
@@ -191,8 +202,8 @@ body {
     padding: 25px;
     border-radius: 10px;
     border-top: 4px solid #38bdf8;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .card:hover, .sub-card:hover {
@@ -211,7 +222,7 @@ body {
     font-size: 0.95rem;
 }
 
-/* BLOQUE RESALTADO */
+/* BLOQUE DE TEXTO RESALTADO */
 .highlight-box {
     background-color: #1e293b;
     padding: 30px;
@@ -219,7 +230,7 @@ body {
     border: 1px dashed #38bdf8;
 }
 
-.highlight-box ul, .highlight-box ol {
+.highlight-box ul {
     margin-top: 15px;
     padding-left: 25px;
     color: #cbd5e1;
@@ -229,117 +240,148 @@ body {
     margin-bottom: 10px;
 }
 
-.highlight-box li strong {
-    display: inline-block;
-    min-width: 150px;
-    font-size: 1.1rem;
-    color: #38bdf8;
-}
-
-/* AJUSTES ESPECÍFICOS UNIDAD 5 */
-#unidad5 .grid-models {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-}
-
-#unidad5 .card {
+/* ==========================================================================
+   ESTILOS DE TABLAS (PRÁCTICAS)
+   ========================================================================== */
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 20px;
+    border-radius: 8px;
     border: 1px solid #334155;
 }
 
-/* FOOTER */
-.footer {
-    text-align: center;
-    padding: 50px;
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
     background-color: #1e293b;
-    color: #64748b;
-    font-size: 0.9rem;
-    border-top: 1px solid #334155;
+    color: #cbd5e1;
+    font-size: 0.95rem;
+    text-align: left;
 }
 
-/* =========================================
-   NAVEGACIÓN (ACTUALIZADA PARA CELULAR)
-   ========================================= */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.data-table th {
+    background-color: #334155;
+    color: #38bdf8;
+    padding: 14px 16px;
+    font-weight: 600;
+    border-bottom: 2px solid #1e293b;
+}
+
+.data-table td {
+    padding: 14px 16px;
+    border-bottom: 1px solid #334155;
+}
+
+/* ==========================================================================
+   GALERÍA DE FOTOS DE PRÁCTICAS
+   ========================================================================== */
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.gallery-item {
     background-color: #1e293b;
-    padding: 0.8rem 5%;
-    border-bottom: 3px solid #38bdf8;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
-    flex-wrap: wrap; /* Esto permite que el menú baje si no hay espacio */
-}
-
-.header-brand {
+    border: 1px solid #334155;
+    border-radius: 12px;
+    overflow: hidden;
     display: flex;
-    align-items: center;
-    gap: 10px;
+    flex-direction: column;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
-.logo-img {
-    height: 45px;
-    width: auto;
+.gallery-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(56, 189, 248, 0.25);
+    border-color: #38bdf8;
 }
 
-.school-name {
-    font-size: 1.1rem;
-    font-weight: bold;
-    color: #ffffff;
-    max-width: 150px; /* Evita que el texto empuje todo el menú */
-    line-height: 1.2;
+.gallery-item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    background-color: #0f172a;
 }
 
-/* AJUSTES ESPECÍFICOS PARA MÓVIL (768px o menos) */
-@media (max-width: 768px) {
+/* ==========================================================================
+   NUEVA SECCIÓN: MEDIA QUERIES (RESPONSIVE DESIGN)
+   ========================================================================== */
+
+/* Para tablets o pantallas medianas (Menos de 992px) */
+@media screen and (max-width: 992px) {
+    .content-section {
+        padding: 60px 5%; /* Reducimos los márgenes laterales */
+    }
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+}
+
+/* Para teléfonos celulares (Menos de 768px) */
+@media screen and (max-width: 768px) {
+    /* Convertimos la barra de navegación en un diseño vertical limpio */
     .navbar {
-        justify-content: center; /* Centra el contenido en el cel */
-        padding: 0.5rem;
-    }
-
-    .header-brand {
-        width: 100%;
-        justify-content: center;
-        margin-bottom: 10px;
-    }
-
-    .school-name {
-        font-size: 1rem;
-        max-width: none;
+        flex-direction: column;
+        gap: 15px;
+        padding: 1rem;
+        text-align: center;
     }
 
     .nav-links {
         width: 100%;
-        justify-content: space-evenly;
-        border-top: 1px solid #334155;
-        padding-top: 10px;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
     }
 
     .nav-links li {
-        padding: 0;
+        padding: 0 8px;
+    }
+
+    /* Ajustes del Hero para pantallas pequeñas */
+    .hero {
+        height: 50vh;
     }
 
     .hero h1 {
-        font-size: 2.2rem; /* Texto de Arquitectura más pequeño */
-        padding: 0 10px;
+        font-size: 2.2rem;
     }
 
     .hero p {
         font-size: 1rem;
-        padding: 0 15px;
     }
 
-    /* Títulos de unidades más ajustados */
     .section-title {
-        font-size: 1.6rem;
+        font-size: 1.8rem;
+        margin-bottom: 25px;
     }
 
-    /* Dropdown ajustado para celular */
+    /* Rediseño de las cajas desplegables en móvil para que no se corten */
     .dropdown-content {
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 250px;
+        position: fixed;
+        left: 5%;
+        right: 5%;
+        width: 90%;
+        top: auto;
+        transform: translateY(5px);
+    }
+    
+    /* Forzar que las tarjetas ocupen el ancho completo si la pantalla es muy chica */
+    .grid-models, .sub-grid, .photo-gallery {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    /* En pantallas chicas, la última foto de la práctica 4 deja de abarcar dos columnas */
+    .photo-gallery .gallery-item[style*="grid-column"] {
+        grid-column: unset !important;
+    }
+
+    .gallery-item img {
+        height: 200px;
     }
 }
